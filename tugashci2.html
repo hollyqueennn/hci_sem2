@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>FORM SISWA</h1>
+    <form action="">
+        <table border="1">
+            <tr>
+                <td>
+                    <label for="nama">Nama Siswa</label>
+                </td>
+                <td>
+                    <input type="text" name="nama" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email</label>
+                </td>
+                <td>
+                    <input type="email" name="email" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="anak">Jumlah Anak (Upto 10)</label>
+                </td>
+                <td>
+                    <input type="number" name="anak" id="" placeholder="0" max="10">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender">Gender</label>
+                </td>
+                <td>
+                    <input type="radio" name="gender" id="">
+                    <label for="">Laki - Laki</label>
+                    <br>
+                    <input type="radio" name="gender" id="">
+                    <label for="">Perempuan</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pendidikan">Pendidikan</label>
+                </td>
+                <td>
+                    <select name="pendidikan" id="">
+                        <option value="SD">SD</option>
+                        <option value="SMP">SMP</option>
+                        <option value="SMA">SMA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="hobi">Hobi</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="hobi" id="">
+                    <label for="">Olahraga</label>
+                    <br>
+                    <input type="checkbox" name="hobi" id="">
+                    <label for="">Musik</label>
+                    <br>
+                    <input type="checkbox" name="hobi" id="">
+                    <label for="">Membaca</label>
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="alamat">Alamat</label>
+                </td>
+                <td>
+                    <textarea name="alamat" id="" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="photo">Upload Photo</label>
+                </td>
+                <td>
+                    <input type="file" name="photo" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Simpan</button>
+                </td>
+                <td>
+                    <button type="reset">Batal</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+</body>
+
+</html>

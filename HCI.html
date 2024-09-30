@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulir Data</title>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+
+      body 
+      {
+        font-family: Arial, sans-serif;
+      }
+
+      .kerangka-form 
+      {
+        width:100%;
+        max-width:500px;
+        margin: 0 auto;
+        padding:20px;
+        border:1px solid grey;
+        background-color: white;
+      }
+
+      .judul-form
+      {
+        font-size:24px;
+        font-weight: bold;
+        margin-bottom:-15px;
+      }
+
+      .pelengkap-form
+      {
+        font-size:16px;
+        color: grey;
+      }
+
+      .line-form 
+      {
+        border: none;
+        border-top:4px solid grey;
+        height: 0;
+        margin: -10px 0 20px 0;
+      }
+
+      .row-form 
+      {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap:10px;
+        margin-bottom: 15px;
+      }
+
+      .input-form 
+      {
+        border:1px solid grey;
+        border-radius:5px;
+        padding:10px;
+        font-size:14px;
+      }
+
+      .u-box 
+      {
+        grid-column: span 6;
+      }
+
+      .u-full 
+      {
+        grid-column: span 12;
+      }
+
+      .u-third 
+      {
+        grid-column: span 4;
+      }
+
+      .label-form
+      {
+        grid-column: span 12;
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+
+      .u-help-icon 
+      {
+        background-color: grey;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        margin-left: 5px;
+        cursor: pointer;
+      }
+
+      .radio-group-form 
+      {
+        display: flex;
+        gap: 10px;
+        grid-column: span 12;
+      }
+
+      .radio-wrapper-form 
+      {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 10px;
+        height: 40px;
+        flex: 1;
+      }
+
+      .radio-label-form 
+      {
+        font-size: 14px;
+        flex: 1;
+      }
+
+      .radio-form input[type="radio"] 
+      {
+        margin-right: 10px;
+      }
+
+      .radio-form label 
+      {
+        position: relative;
+        padding-right: 30px;
+        cursor: pointer;
+      }
+
+      .radio-form label::before,
+      .radio-form label::after 
+      {
+        right: 0;
+      }
+
+      .radio-form label::before 
+      {
+        width:18px;
+        height:18px;
+        border:1px solid grey;
+        border-radius:50%;
+      }
+
+      .radio-form label::after 
+      {
+        width: 10px;
+        height: 10px;
+        background-color: grey;
+        border-radius: 50%;
+        opacity: 0;
+      }
+
+      .radio-form input[type="radio"]:checked + label::after 
+      {
+        opacity: 1;
+      }
+
+      .terms-form 
+      {
+        grid-column: span 12;
+        font-size: 12px;
+        color: grey;
+        margin-bottom: 20px;
+      }
+
+      .submit-form 
+      {
+        grid-column: span 12;
+        width: 50%;
+        margin: 0 auto;
+        background-color: green;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .wrapper-form 
+      {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 0 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper-form">
+      <form class="kerangka-form">
+        <h1 class="u-form-title">Daftar</h1>
+        <p class="pelengkap-form">Ini cepat dan mudah</p>
+        <hr class="line-form" />
+        <div class="row-form">
+          <input
+            class="input-form u-box"
+            type="text"
+            placeholder="Nama depan"
+          />
+          <input
+            class="input-form u-box"
+            type="text"
+            placeholder="Nama belakang"
+          />
+        </div>
+        <div class="row-form">
+          <input
+            class="input-form u-full"
+            type="text"
+            placeholder="Nomer seluler atau email"
+          />
+        </div>
+        <div class="row-form">
+          <input
+            class="input-form u-full"
+            type="password"
+            placeholder="Kata sandi baru"
+          />
+        </div>
+        <div class="row-form">
+          <label class="label-form"
+            >Tanggal Lahir <span class="u-help-icon">?</span></label
+          >
+          <select class="input-form u-third" id="day">
+            <option value="">Day</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <select class="input-form u-third" id="month">
+            <option value="">Month</option>
+            <option value="1">Jan</option>
+            <option value="2">Feb</option>
+            <option value="3">Mar</option>
+            <option value="4">Apr</option>
+            <option value="5">Mei</option>
+            <option value="6">Jun</option>
+            <option value="7">Jul</option>
+            <option value="8">Agu</option>
+            <option value="9">Sep</option>
+            <option value="10">Okt</option>
+            <option value="11">Nov</option>
+            <option value="12">Dec</option>
+          </select>
+          <select class="input-form u-third" id="year">
+            <option value="">Year</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+          </select>
+        </div>
+        <div class="row-form">
+          <label class="label-form"
+            >Jenis Kelamin <span class="u-help-icon">?</span></label
+          >
+          <div class="radio-group-form">
+            <div
+              class="radio-wrapper-form"
+              style="justify-content: space-between"
+            >
+              <label class="radio-label-form" for="female">Perempuan</label>
+              <input type="radio" name="gender" id="female" />
+            </div>
+            <div
+              class="radio-wrapper-form"
+              style="justify-content: space-between"
+            >
+              <label class="radio-label-form" for="male">Laki-laki</label>
+              <input type="radio" name="gender" id="male" />
+            </div>
+            <div
+              class="radio-wrapper-form"
+              style="justify-content: space-between"
+            >
+              <label class="radio-label-form" for="other">Khusus</label>
+              <input type="radio" name="gender" id="other" />
+            </div>
+          </div>
+        </div>
+        <div class="row-form">
+          <p class="terms-form">
+            Dengan mengklik Daftar. Anda menyetujui <a href="https://google.com">Ketentuan</a>,   <a href="https://google.com">Kebijakan Data</a>
+            dan <a href="https://google.com">Kebijakan Cookie</a> kami. Anda akan menerima Notifikasi SMS dari
+            Facebook dan dapat menolaknya kapan saja.
+          </p>
+          <button class="submit-form" type="submit">Daftar</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
